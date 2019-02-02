@@ -4,42 +4,42 @@ import {createStackNavigator} from 'react-navigation'
 
 type Props = {}
 
-class Principal extends Component<Props> {
+class Main extends Component<Props> {
   static navigationOptions = {
-    title: 'Principal titulo',
+    title: 'Main title',
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Ejemplo StackNavigator</Text>
+        <Text style={styles.welcome}>Example StackNavigator</Text>
         <Button
-          title="Ir al detalle"
-          onPress={() => this.props.navigation.navigate('DetallePantalla')}
+          title="Go to the details"
+          onPress={() => this.props.navigation.navigate('DetailScreen')}
         />
       </View>
     )
   }
 }
 
-class Detalle extends Component<Props> {
+class Detail extends Component<Props> {
   static navigationOptions = {
-    title: 'Detalle titulo',
+    title: 'Detail title',
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Detalle StackNavigator</Text>
+        <Text style={styles.welcome}>Detail StackNavigator</Text>
       </View>
     )
   }
 }
 
 const stackNavigator = createStackNavigator({
-  PrincipalPantalla: {
-    screen: Principal,
+  MainScreen: {
+    screen: Main,
   },
-  DetallePantalla: {
-    screen: Detalle,
+  DetailScreen: {
+    screen: Detail,
   },
 })
 
